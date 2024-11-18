@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- responsive -->
+    <link rel="stylesheet" href="./asets/css/responsive.css" />
     <title>dự án 3 trên figma</title>
   </head>
   <body>
@@ -22,7 +24,7 @@
 
           <!-- nav -->
           <nav class="nav">
-            <ul>
+            <ul id="menu-PC">
               <li>
                 <a href="">Home</a>
               </li>
@@ -41,7 +43,7 @@
             </ul>
           </nav>
           <!-- sig up, sing in -->
-          <div class="action">
+          <div class="action header-action">
             <a href="" class="btn btn-sing-in">Sign in</a>
             <a href="" class="btn btn-sing-up">Sign up</a>
           </div>
@@ -239,7 +241,11 @@
           <div class="body">
             <!-- feedback-left -->
             <div class="feedback-left">
-              <img src="./asets/icon/feedback.svg" alt="" class="img" />
+              <img
+                src="./asets/icon/feedback.svg"
+                alt=""
+                class="img img-feedback"
+              />
               <p class="desc">
                 “They are the best people. And this is the suitable platform to
                 learn from distance.”
@@ -392,5 +398,85 @@
         </div>
       </div>
     </footer>
+
+    <!-- ===================responsive thích ứng cho web=================== -->
+    <div class="menu-responsive__mobile">
+      <!-- menu -->
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <!-- biểu tượng menu -->
+      <label for="menu-checkbox">
+        <svg
+          class="menu-icon__responsive--mobile"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="CurrentColor"
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+
+      <!-- lớp đổ bóng toàn màn hình khi click vào thanh menu ở chế độ tablets và phone -->
+      <label class="menu-overlay" for="menu-checkbox"></label>
+
+      <!-- tạo danh sách menu -->
+      <div class="menu-drawer__responsive">
+        <div class="header-top__menu--responsive">
+          <a href=""><img src="./asets/icon/Logo.svg" alt="" class="logo" /></a>
+          <!-- close-menu -->
+          <label for="menu-checkbox">
+            <svg
+              class="close-menu__responsive"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="CurrentColor"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+              />
+            </svg>
+          </label>
+        </div>
+
+        <!-- copy menu -->
+        <!-- <ul id="menu-Mobile"></ul>
+        <script>
+          const menuPC = document.querySelector("#menu-PC");
+          const menuMobile = document.querySelector("#menu-Mobile");
+          menuMobile.innerHTML = menuPC.innerHTML;
+        </script> -->
+        <ul id="menu-PC">
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Features</a>
+          </li>
+          <li>
+            <a href="">Pricing</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+
+        <!-- sig up, sing in -->
+        <div class="line-horizontal"></div>
+        <div class="menu-action__responsive">
+          <a href="" class="btn-sing-in">Sign in</a>
+          <a href="" class="btn-sing-up">Sign up</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

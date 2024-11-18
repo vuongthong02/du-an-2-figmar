@@ -1,0 +1,428 @@
+/* PC */
+@media (min-width: 992px) {
+  .menu-icon__responsive--mobile {
+    display: none;
+  }
+
+  /* ở chế độ PC thì ẩn menu của chế độ tablet và mobile */
+  .menu-drawer__responsive {
+    display: none;
+  }
+}
+
+/* tablet và mobile */
+@media (max-width: 991.98px) {
+  /* ================= Header========================= */
+  /* ẩn nav */
+  .nav {
+    display: none;
+  }
+
+  /* đẩy header sang trái */
+  .header .body {
+    justify-content: end;
+    padding: 30px 0px 8px;
+  }
+  .fixed {
+    top: 0px;
+  }
+
+  /* căn biểu tượng menu phù hợp với header */
+  .menu-icon__responsive--mobile {
+    width: 24px;
+    color: #151515;
+    position: fixed;
+    top: 50px;
+    left: 52px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  /* khi click vào biểu tượng menu thì hình mờ bao quanh nền hiện lên */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 2;
+    /* bình thường ẩn overlay đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* tạo danh sách menu */
+  .menu-drawer__responsive {
+    position: fixed;
+    background-color: #4b4242;
+    inset: 0 40% 0 0;
+    padding: 60px;
+    transform: translateX(-100%);
+    z-index: 2;
+    transition: 0.5s;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer__responsive {
+    transform: translateX(0);
+  }
+
+  /* menu-top */
+  .header-top__menu--responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .close-menu__responsive {
+    width: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* tạo menu taplet và mobile */
+
+  #menu-PC a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: block;
+    padding: 20px 10px;
+  }
+
+  #menu-PC a:hover {
+    text-shadow: 1px 0px currentColor;
+    background-color: rgb(138, 146, 146);
+  }
+
+  /* ================================  Hero ======================== */
+  .hero .body {
+    flex-direction: column;
+  }
+
+  .hero .hero-left {
+    width: 100%;
+    margin: 50px 0px;
+  }
+
+  .hero-left .title {
+    font-size: 4rem;
+  }
+
+  .hero-left .desc {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .hero-left .buttom {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .hero .hero-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-right .courses-hero-right,
+  .hero-right .Schedules-hero-right {
+    left: 17px;
+  }
+
+  /* ========================== features  =================== */
+  .features .body {
+    width: 100%;
+  }
+
+  .features .features-top {
+    margin-top: 120px;
+  }
+
+  .features-top .heading-h2 {
+    font-size: 4rem;
+  }
+
+  .features .features-bottom {
+    justify-content: normal;
+    column-gap: 20px;
+  }
+
+  /* =========================== Popular ========================= */
+  .popular {
+    margin-top: 100px;
+  }
+
+  .popular .popular-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 180px;
+  }
+
+  .popular .popular-center .img {
+    width: 100%;
+  }
+
+  .popular-center .content {
+    left: 130px;
+    max-width: 100%;
+  }
+
+  .popular .popular-bottom {
+    width: 100%;
+    margin-top: 200px;
+  }
+
+  /* ============feedback===================== */
+  .feedback .body {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+
+  .feedback .feedback-left {
+    width: 100%;
+  }
+
+  .feedback-left .desc {
+    max-width: 100%;
+  }
+
+  .feedback-left .group {
+    justify-content: center;
+    margin: 32px 0px 63px;
+  }
+
+  .feedback .feedback-right {
+    width: 100%;
+  }
+
+  .feedback-right .img1 {
+    top: 130px;
+  }
+
+  .feedback-right .img2 {
+    right: 80px;
+    top: 23px;
+  }
+
+  .feedback-right .img5 {
+    left: 40px;
+  }
+
+  .feedback-right .img6 {
+    top: 24px;
+    left: 120px;
+  }
+
+  /* ====================== acount ================*/
+  .acount {
+    margin-top: 597px;
+  }
+
+  .acount .acount-left .heading-h2 {
+    width: 100%;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .menu-action__responsive {
+    display: none;
+  }
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+  .action.header-action {
+    display: none;
+  }
+
+  /* =============header============= */
+  .menu-icon__responsive--mobile {
+    top: 40px;
+    left: 38px;
+  }
+
+  .menu-drawer__responsive {
+    inset: 0 25% 0 0;
+    padding: 20px;
+  }
+
+  #menu-PC a {
+    font-size: 2.1rem;
+  }
+
+  .line-horizontal {
+    width: 100%;
+    border-top: 2px solid #151515;
+    margin: 20px 0px;
+  }
+
+  .menu-action__responsive a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 600;
+    display: block;
+    padding: 20px 10px;
+  }
+
+  .menu-action__responsive a:hover {
+    text-shadow: 1px 0px currentColor;
+    background-color: rgb(138, 146, 146);
+  }
+
+  /* ==================hero============ */
+  .hero-left .title {
+    font-size: 3.2rem;
+  }
+
+  .hero-right .img {
+    width: 100%;
+    height: 430px;
+    margin-top: 40px;
+  }
+
+  .hero .hero-right .courses-hero-right {
+    left: -16px;
+    top: 22px;
+  }
+
+  .hero .Schedules-hero-right {
+    left: -16px;
+    top: 415px;
+  }
+
+  .hero-right .student-hero-right {
+    top: 436px;
+    right: -18px;
+  }
+
+  /* ==================== features======================== */
+  .features .features-top {
+    margin-top: 155px;
+  }
+
+  .features-top .heading-h2 {
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  .features-top .desc {
+    width: 100%;
+  }
+
+  .features .features-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+  }
+
+  /* ==================popular============================ */
+  .popular-top {
+    margin-top: 660px;
+  }
+
+  .popular-top .heading-h2 {
+    font-size: 3.2rem;
+  }
+
+  .popular-top .heading-h2 {
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  .popular-center .content {
+    left: 8px;
+  }
+
+  /* .popular .popular-bottom {
+    align-items: flex-start;
+  } */
+
+  .popular-bottom span {
+    display: block;
+    width: 100%;
+    font-size: 3.2rem;
+  }
+
+  /* ==================feedback================== */
+  .feedback .body {
+    margin-top: 85px;
+  }
+
+  .feedback .img-feedback {
+    width: 20px;
+  }
+
+  .feedback-left .desc {
+    font-size: 2rem;
+    margin-top: 16px;
+  }
+
+  .feedback-left .group .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback-right .img1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .feedback-right .img2 {
+    width: 100px;
+    height: 100px;
+    right: 0px;
+    top: 15px;
+  }
+
+  .feedback-right .img6 {
+    width: 82px;
+    height: 82px;
+    top: 52px;
+    left: 15px;
+  }
+
+  .feedback-right .img3 {
+    width: 68px;
+    height: 68px;
+    top: 315px;
+    left: 281px;
+  }
+
+  .feedback-right .img4 {
+    top: 367px;
+    left: 134px;
+  }
+
+  .feedback-right .img5 {
+    top: 290px;
+    left: 0px;
+  }
+
+  /* ====================== acount ================*/
+  .acount .body {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .acount-left {
+    width: 100%;
+  }
+
+  .acount .acount-left .heading-h2 {
+    font-size: 3.2rem;
+  }
+
+  /* ===================footer=================== */
+  .footer .footer-top {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
